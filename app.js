@@ -42,12 +42,10 @@ function sortearAmigo() {
     resultado.innerHTML = `<li>🎉 El amigo secreto es: <strong>${amigoSorteado}</strong> 🎊</li>`; // Muestra el resultado
     console.log(amigos);
     document.getElementById("listaAmigos").style.display = "none";
-
-    
-
     actualizarLista(); // Actualiza la lista eliminando el nombre sorteado
 
-    if (amigos.length === 0) { // Si ya no quedan amigos, mostrar alerta
+    if (amigos.length === "") { // Si ya no quedan amigos, mostrar alerta
+        
         alert("No hay más nombres en la lista.");
     }
 }
