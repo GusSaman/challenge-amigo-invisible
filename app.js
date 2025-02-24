@@ -15,6 +15,7 @@ function agregarAmigo(){
         alert("Este nombre ya está en la lista.");
         return;
     }
+    amigos.push(nombre);
     
     let lista = document.getElementById("listaAmigos"); // Captura el <ul>
     lista.innerHTML += `<li>${nombre}</li>`; // Agrega el nombre como <li>
