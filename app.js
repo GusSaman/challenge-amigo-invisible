@@ -4,7 +4,7 @@ let amigos = [];
 function agregarAmigo(){
 
     let input = document.getElementById("amigo"); // Captura el input
-    let nombre = input.value; // Obtiene el valor sin espacios extra
+    let nombre = input.value; // Obtiene el valor escrito en el input
 
     if (nombre === "") {
         alert("Por favor, ingresa un nombre.");
@@ -16,14 +16,10 @@ function agregarAmigo(){
         return;
     }
     
-    amigos.push(nombre); // Agrega el nombre a la lista
+    let lista = document.getElementById("listaAmigos"); // Captura el <ul>
+    lista.innerHTML += `<li>${nombre}</li>`; // Agrega el nombre como <li>
 
-    // Actualiza la lista en el HTML
-    let lista = document.getElementById("listaAmigos");
-    let li = document.createElement("li");
-    li.textContent = nombre;
-    lista.appendChild(li);
-    console.log(amigos);
+    input.value = ""; // Limpia el input
 
-    input.value = ""; // Limpia el input después de agregar
+    
 }
